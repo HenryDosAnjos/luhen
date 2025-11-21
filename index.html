@@ -778,42 +778,114 @@
     <script>
         // Dados dos produtos (SIMULAÇÃO: Catálogo expandido para 26 itens com categorias)
         const products = [
-            // Categoria: Vestuário & Calçados
-            { id: 1, name: "Tênis Esportivo Pro", price: 199.90, desc: "Tênis leve e respirável para alta performance.", category: "Vestuário", img: "https://via.placeholder.com/280x180/007bff/ffffff?text=Tenis+1", images: ["https://via.placeholder.com/600x400/007bff/ffffff?text=FOTO+PRINCIPAL+TENIS", "https://via.placeholder.com/600x400/0056b3/ffffff?text=FOTO+LATERAL"] },
-            { id: 2, name: "Camiseta nike", price: 49.99, desc: "Tecido antitranspirante ideal para exercícios e jogos.", category: "Vestuário", img: "https://via.placeholder.com/280x180/ff4136/ffffff?text=Camiseta+2", images: ["https://via.placeholder.com/600x400/ff4136/ffffff?text=FOTO+PRINCIPAL+CAMISETA", "https://via.placeholder.com/600x400/cc342c/ffffff?text=FOTO+COSTAS"] },
-            { id: 26, name: "Óculos Bloqueador Luz Azul", price: 79.00, desc: "Proteja seus olhos do cansaço visual.", category: "Acessórios", img: "https://via.placeholder.com/3498db/ffffff?text=Oculos+26", images: ["https://via.placeholder.com/600x400/3498db/ffffff?text=Oculos"] },
-            
-            // Categoria: Periféricos
-            { id: 6, name: "Mouse Gamer RGB", price: 95.00, desc: "Precisão e iluminação personalizável para jogos.", category: "Periféricos", img: "https://via.placeholder.com/280x180/ff4136/ffffff?text=Mouse+6", images: ["https://via.placeholder.com/600x400/ff4136/ffffff?text=FOTO+PRINCIPAL+MOUSE"] },
-            { id: 7, name: "Teclado Mecânico TKL", price: 280.00, desc: "Switches rápidos para máxima performance.", category: "Periféricos", img: "https://via.placeholder.com/280x180/343a40/ffffff?text=Teclado+7", images: ["https://via.placeholder.com/600x400/343a40/ffffff?text=Teclado"] },
-            { id: 17, name: "Headset Pro Gamer", price: 230.00, desc: "Áudio 7.1 e microfone com cancelamento de ruído.", category: "Periféricos", img: "https://via.placeholder.com/280x180/636e72/ffffff?text=Headset+17", images: ["https://via.placeholder.com/600x400/636e72/ffffff?text=Headset"] },
-            
-            // Categoria: Acessórios
-            { id: 3, name: "Fone Bluetooth Alta Fidelidade", price: 120.00, desc: "Áudio cristalino com bateria de longa duração.", category: "Acessórios", img: "https://via.placeholder.com/280x180/007bff/000000?text=Fone+3", images: ["https://via.placeholder.com/600x400/007bff/000000?text=FOTO+PRINCIPAL+FONE"] },
-            { id: 4, name: "Mochila Executiva Impermeável", price: 180.00, desc: "Design elegante e proteção total contra chuva.", category: "Acessórios", img: "https://via.placeholder.com/280x180/ff4136/ffffff?text=Mochila+4", images: ["https://via.placeholder.com/600x400/ff4136/ffffff?text=FOTO+PRINCIPAL+MOCHILA"] },
-            { id: 10, name: "Power Bank 20000mAh", price: 99.00, desc: "Duas cargas completas para seu celular.", category: "Acessórios", img: "https://via.placeholder.com/280x180/adb5bd/000000?text=Powerbank+10", images: ["https://via.placeholder.com/600x400/adb5bd/000000?text=Powerbank"] },
-            { id: 12, name: "Hub USB-C 7 em 1", price: 110.00, desc: "Expansão total para notebooks modernos.", category: "Acessórios", img: "https://via.placeholder.com/280x180/e9ecef/000000?text=Hub+12", images: ["https://via.placeholder.com/600x400/e9ecef/000000?text=Hub"] },
-            { id: 15, name: "Cabo USB-C Trançado 2m", price: 45.00, desc: "Durabilidade extrema e carregamento rápido.", category: "Acessórios", img: "https://via.placeholder.com/280x180/212529/ffffff?text=Cabo+15", images: ["https://via.placeholder.com/600x400/212529/ffffff?text=Cabo"] },
-            { id: 16, name: "Suporte Ergonômico p/ Notebook", price: 65.00, desc: "Melhore sua postura e evite dores.", category: "Acessórios", img: "https://via.placeholder.com/280x180/2d3436/ffffff?text=Suporte+16", images: ["https://via.placeholder.com/600x400/2d3436/ffffff?text=Suporte"] },
-            { id: 19, name: "Pen Drive USB 3.0 128GB", price: 55.00, desc: "Memória flash de alta velocidade.", category: "Acessórios", img: "https://via.placeholder.com/280x180/34495e/ffffff?text=PenDrive+19", images: ["https://via.placeholder.com/600x400/34495e/ffffff?text=PenDrive"] },
+    // Categoria: Tênis
+    {
+        id: 1,
+        name: "Tênis Nike Air Max 90",
+        price: 899.99,
+        desc: "Clássico Air Max com amortecimento icônico e cabedal durável. Estilo e conforto garantidos.",
+        category: "Calçados",
+        brand: "Nike",
+        img: "https://via.placeholder.com/280x180/1e272e/ffffff?text=Tênis+Air+Max+90",
+        images: ["https://via.placeholder.com/600x400/1e272e/ffffff?text=FOTO+PRINCIPAL+AIR+MAX", "https://via.placeholder.com/600x400/2f3640/ffffff?text=FOTO+LATERAL+AIR+MAX"]
+    },
+    {
+        id: 2,
+        name: "Tênis Jordan Retro 1 High",
+        price: 1399.90,
+        desc: "Um ícone do basquete, estilo high-top em couro premium. Essencial para colecionadores.",
+        category: "Calçados",
+        brand: "Jordan",
+        img: "https://via.placeholder.com/280x180/c0392b/ffffff?text=Jordan+Retro+1",
+        images: ["https://via.placeholder.com/600x400/c0392b/ffffff?text=FOTO+PRINCIPAL+JORDAN+1", "https://via.placeholder.com/600x400/e74c3c/ffffff?text=FOTO+DETALHE+JORDAN"]
+    },
+    {
+        id: 3,
+        name: "Tênis Adidas Ultraboost 22",
+        price: 799.00,
+        desc: "Máximo retorno de energia com a tecnologia Boost. Ideal para corrida e uso diário.",
+        category: "Calçados",
+        brand: "Adidas",
+        img: "https://via.placeholder.com/280x180/2ecc71/ffffff?text=Adidas+Ultraboost",
+        images: ["https://via.placeholder.com/600x400/2ecc71/ffffff?text=FOTO+PRINCIPAL+ULTRA", "https://via.placeholder.com/600x400/27ae60/ffffff?text=FOTO+SOLADO+ULTRA"]
+    },
 
-            // Categoria: Gadgets & Smart
-            { id: 5, name: "Smartwatch Ultra X", price: 350.00, desc: "Monitoramento de saúde e GPS integrado.", category: "Smart", img: "https://via.placeholder.com/280x180/007bff/ffffff?text=Smartwatch+5", images: ["https://via.placeholder.com/600x400/007bff/ffffff?text=FOTO+PRINCIPAL+WATCH"] },
-            { id: 8, name: "Cadeira Gamer Ergonômica", price: 1200.00, desc: "Conforto premium para longas sessões.", category: "Smart", img: "https://via.placeholder.com/280x180/495057/ffffff?text=Cadeira+8", images: ["https://via.placeholder.com/600x400/495057/ffffff?text=Cadeira"] },
-            { id: 9, name: "Webcam HD Streaming", price: 150.00, desc: "Vídeo nítido para chamadas e lives.", category: "Smart", img: "https://via.placeholder.com/280x180/6c757d/ffffff?text=Webcam+9", images: ["https://via.placeholder.com/600x400/6c757d/ffffff?text=Webcam"] },
-            { id: 11, name: "Tablet Profissional 10'", price: 799.00, desc: "Tela de alta resolução e processamento rápido.", category: "Smart", img: "https://via.placeholder.com/280x180/ced4da/000000?text=Tablet+11", images: ["https://via.placeholder.com/600x400/ced4da/000000?text=Tablet"] },
-            { id: 14, name: "Luminária LED Smart", price: 75.00, desc: "Controle por voz e cores ajustáveis.", category: "Smart", img: "https://via.placeholder.com/280x180/f8f9fa/000000?text=Luminaria+14", images: ["https://via.placeholder.com/600x400/f8f9fa/000000?text=Luminaria"] },
-            { id: 20, name: "Smart Plug Wi-Fi", price: 40.00, desc: "Controle seus eletrodomésticos pelo app.", category: "Smart", img: "https://via.placeholder.com/280x180/95a5a6/000000?text=SmartPlug+20", images: ["https://via.placeholder.com/600x400/95a5a6/000000?text=SmartPlug"] },
-            { id: 21, name: "Roteador Dual Band AC1200", price: 170.00, desc: "Internet rápida e estável para sua casa.", category: "Smart", img: "https://via.placeholder.com/280x180/bdc3c7/000000?text=Roteador+21", images: ["https://via.placeholder.com/600x400/bdc3c7/000000?text=Roteador"] },
-            { id: 22, name: "Câmera de Segurança IP", price: 135.00, desc: "Monitoramento em tempo real com visão noturna.", category: "Smart", img: "https://via.placeholder.com/280x180/ecf0f1/000000?text=Camera+22", images: ["https://via.placeholder.com/600x400/ecf0f1/000000?text=Camera"] },
-            
-            // Categoria: Utilidades
-            { id: 13, name: "Caixa de Som Portátil", price: 85.00, desc: "Som potente e resistente à água.", category: "Utilidades", img: "https://via.placeholder.com/280x180/f8f9fa/000000?text=Caixa+13", images: ["https://via.placeholder.com/600x400/f8f9fa/000000?text=Caixa"] },
-            { id: 18, name: "SSD Externo 500GB", price: 390.00, desc: "Transferência ultrarrápida de dados.", category: "Utilidades", img: "https://via.placeholder.com/2c3e50/ffffff?text=SSD+18", images: ["https://via.placeholder.com/600x400/2c3e50/ffffff?text=SSD"] },
-            { id: 23, name: "Filtro de Linha 8 Tomadas", price: 50.00, desc: "Proteção contra surtos elétricos.", category: "Utilidades", img: "https://via.placeholder.com/280x180/7f8c8d/ffffff?text=Filtro+23", images: ["https://via.placeholder.com/600x400/7f8c8d/ffffff?text=Filtro"] },
-            { id: 24, name: "Mini Ventilador USB", price: 35.00, desc: "Portátil e silencioso.", category: "Utilidades", img: "https://via.placeholder.com/280x180/9b59b6/ffffff?text=Ventilador+24", images: ["https://via.placeholder.com/600x400/9b59b6/ffffff?text=Ventilador"] },
-            { id: 25, name: "Caneta Touch Screen", price: 25.00, desc: "Precisão para tablets e smartphones.", category: "Utilidades", img: "https://via.placeholder.com/280x180/8e44ad/ffffff?text=Caneta+25", images: ["https://via.placeholder.com/600x400/8e44ad/ffffff?text=Caneta"] }
-        ];
+    // Categoria: Camisas
+    {
+        id: 4,
+        name: "Camiseta Nike Dri-FIT Legend",
+        price: 129.99,
+        desc: "Tecido antitranspirante leve e macio. Perfeita para treinos intensos e jogos.",
+        category: "Vestuário",
+        brand: "Nike",
+        img: "https://via.placeholder.com/280x180/3498db/ffffff?text=Camiseta+Nike+Dri-FIT",
+        images: ["https://via.placeholder.com/600x400/3498db/ffffff?text=FOTO+PRINCIPAL+NIKE", "https://via.placeholder.com/600x400/2980b9/ffffff?text=FOTO+COSTAS+NIKE"]
+    },
+    {
+        id: 5,
+        name: "Camisa Adidas Trefoil Clássica",
+        price: 149.90,
+        desc: "Camiseta de algodão com o icônico logo Trefoil. Conforto e estilo casual.",
+        category: "Vestuário",
+        brand: "Adidas",
+        img: "https://via.placeholder.com/280x180/f39c12/ffffff?text=Camisa+Adidas+Trefoil",
+        images: ["https://via.placeholder.com/600x400/f39c12/ffffff?text=FOTO+PRINCIPAL+TREFOIL", "https://via.placeholder.com/600x400/f1c40f/ffffff?text=FOTO+DETALHE+LOGO"]
+    },
+    {
+        id: 6,
+        name: "Camiseta Jordan Jumpman Logo",
+        price: 179.90,
+        desc: "Algodão premium com o logo Jumpman no peito. Estilo basqueteiro autêntico.",
+        category: "Vestuário",
+        brand: "Jordan",
+        img: "https://via.placeholder.com/280x180/7f8c8d/ffffff?text=Camiseta+Jordan",
+        images: ["https://via.placeholder.com/600x400/7f8c8d/ffffff?text=FOTO+PRINCIPAL+JUMPMAN", "https://via.placeholder.com/600x400/95a5a6/ffffff?text=FOTO+ETIQUETA+JUMPMAN"]
+    },
+
+    // Categoria: Calças e Bermudas
+    {
+        id: 7,
+        name: "Calça Moletom Adidas Essentials",
+        price: 249.90,
+        desc: "Corte afunilado e tecido macio, ideal para o dia a dia e momentos de descanso.",
+        category: "Vestuário",
+        brand: "Adidas",
+        img: "https://via.placeholder.com/280x180/2c3e50/ffffff?text=Calça+Moletom+Adidas",
+        images: ["https://via.placeholder.com/600x400/2c3e50/ffffff?text=FOTO+PRINCIPAL+CALÇA", "https://via.placeholder.com/600x400/34495e/ffffff?text=FOTO+DETALHE+CALÇA"]
+    },
+    {
+        id: 8,
+        name: "Calça Cargo Nike Sportswear Tech",
+        price: 499.00,
+        desc: "Design moderno com múltiplos bolsos e tecido tecnológico para conforto máximo.",
+        category: "Vestuário",
+        brand: "Nike",
+        img: "https://via.placeholder.com/280x180/6c5ce7/ffffff?text=Calça+Cargo+Nike",
+        images: ["https://via.placeholder.com/600x400/6c5ce7/ffffff?text=FOTO+PRINCIPAL+CARGO", "https://via.placeholder.com/600x400/4e545c/ffffff?text=FOTO+LATERAL+CARGO"]
+    },
+    {
+        id: 9,
+        name: "Bermuda Boardshort Quiksilver",
+        price: 219.00,
+        desc: "Tecido elástico e secagem rápida. Perfeita para praia e piscina.",
+        category: "Vestuário",
+        brand: "Quiksilver",
+        img: "https://via.placeholder.com/280x180/00b894/ffffff?text=Bermuda+Quiksilver",
+        images: ["https://via.placeholder.com/600x400/00b894/ffffff?text=FOTO+PRINCIPAL+BOARD", "https://via.placeholder.com/600x400/009688/ffffff?text=FOTO+DETALHE+BOARD"]
+    },
+
+    // Categoria: Acessórios (Boné)
+    {
+        id: 10,
+        name: "Boné Adidas Baseball Cap",
+        price: 99.99,
+        desc: "Clássico boné de baseball com ajuste regulável. Proteção e estilo esportivo.",
+        category: "Acessórios",
+        brand: "Adidas",
+        img: "https://via.placeholder.com/280x180/d35400/ffffff?text=Boné+Adidas",
+        images: ["https://via.placeholder.com/600x400/d35400/ffffff?text=FOTO+PRINCIPAL+BONÉ", "https://via.placeholder.com/600x400/e67e22/ffffff?text=FOTO+LATERAL+BONÉ"]
+    },
+];
 
         let cart = []; 
         let currentBannerIndex = 0;
@@ -1152,3 +1224,4 @@
 </body>
 
 </html>
+
